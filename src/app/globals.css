@@ -1,0 +1,94 @@
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌑 Dark Theme (Black Background) */
+:root {
+  --background-color: #f2e5e5;
+  --text-color: #070000;
+  --primary-color: #4a90e2;
+  --accent-color: #ff4081;
+  --border-radius: 8px;
+  --transition-speed: 0.3s ease-in-out;
+}
+
+/* 🔥 Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh;
+  text-align: center;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 🎨 Styled Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+a:hover {
+  color: var(--accent-color);
+}
+
+/* 💠 Styled Buttons */
+button {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 16px; /* Smaller button */
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all var(--transition-speed);
+}
+
+button:hover {
+  background: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* 📱 Typography */
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+p {
+  font-size: 1rem;
+}
+
+/* 🖥️ Code Blocks */
+code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+}
